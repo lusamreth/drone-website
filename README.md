@@ -1,7 +1,7 @@
 # Sample Drone website using frontity 
 
 ## hosted on vercel 
-https://drone-lusamreth.vercel.app/about-us/
+https://drone-git-main-lusamreth.vercel.app/partners/
 
 ## UNFINISHED :
 - All components are not properly tested
