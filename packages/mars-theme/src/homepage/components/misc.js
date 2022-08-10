@@ -1,4 +1,5 @@
-import { connect, useConnect } from "frontity";
+import { css, connect, useConnect, styled } from "frontity";
+import tw from "tailwind.macro";
 import Link from "@frontity/components/link";
 
 /**
@@ -16,18 +17,12 @@ import Link from "@frontity/components/link";
  *
  * @returns A {@link Link} component, which returns an HTML anchor element.
  */
-const MarsLink = ({ children, ...props }) => {
+const DroneLinkLegit = ({ children, ...props }) => {
   const { state, actions } = useConnect();
-
   /**
    * A handler that closes the mobile menu when a link is clicked.
    */
-  const onClick = () => {
-    if (state.theme.isMobileMenuOpen) {
-      actions.theme.closeMobileMenu();
-    }
-  };
-
+  const onClick = () => {};
   return (
     <Link {...props} onClick={onClick}>
       {children}
@@ -35,4 +30,17 @@ const MarsLink = ({ children, ...props }) => {
   );
 };
 
-export default connect(MarsLink, { injectProps: false });
+const DroneLinkMock = ({ children, link, ...props }) => {
+  /**
+   * A handler that closes the mobile menu when a link is clicked.
+   */
+  const onClick = () => {};
+  return (
+    <a href={link} onClick={onClick}>
+      {children}
+    </a>
+  );
+};
+// const Linker = connect(DroneLinkMock, { injectProps: false });
+const Linker = DroneLinkMock;
+export { Linker };

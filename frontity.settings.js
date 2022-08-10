@@ -1,57 +1,43 @@
 const settings = {
-  "name": "drone2",
-  "state": {
-    "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
-    }
+  name: "webe",
+  state: {
+    frontity: {
+      url: "https://test.frontity.org",
+      title: "Test Frontity Blog",
+      description: "WordPress installation for Frontity development",
+    },
   },
-  "packages": [
+  packages: [
     {
-      "name": "@frontity/mars-theme",
-      "state": {
-        "theme": {
-          "menu": [
-            [
-              "Home",
-              "/"
-            ],
-            [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
+      name: "@frontity/mars-theme",
+      state: {
+        theme: {
+          menu: [
+            ["Home", "/"],
+            ["About-us", "/about-us/"],
+            ["Contact", "/contact-page/"],
+            ["partners", "/partners/"],
           ],
-          "featured": {
-            "showOnList": false,
-            "showOnPost": false
-          }
-        }
-      }
+          featured: {
+            showOnList: false,
+            showOnPost: false,
+          },
+        },
+      },
     },
     {
-      "name": "@frontity/wp-source",
-      "state": {
-        "source": {
-          "url": "https://test.frontity.org"
-        }
-      }
+      name: "@frontity/wp-source",
+      state: {
+        source: {
+          // url: "https://test.frontity.org",
+          url: "https://public-api.wordpress.com/wp/v2/sites/goiblas.wordpress.com",
+          // url: "http://localhost:8080/wordpress",
+        },
+      },
     },
     "@frontity/tiny-router",
-    "@frontity/html2react"
-  ]
+    "@frontity/html2react",
+  ],
 };
 
 export default settings;

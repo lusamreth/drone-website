@@ -35,7 +35,11 @@ const Page404 = ({ state }) => {
 export default connect(Page404);
 
 const Container = styled.div`
-  width: 800px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+
+  align-content: center;
   margin: 0;
   padding: 24px;
   text-align: center;

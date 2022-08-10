@@ -1,9 +1,9 @@
-import Theme from "./components";
+import Theme from "./homepage/index";
 import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 
-const marsTheme = {
+const droneTheme = {
   name: "@frontity/mars-theme",
   roots: {
     /**
@@ -33,14 +33,7 @@ const marsTheme = {
    * Frontity like libraries.
    */
   actions: {
-    theme: {
-      toggleMobileMenu: ({ state }) => {
-        state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;
-      },
-      closeMobileMenu: ({ state }) => {
-        state.theme.isMobileMenuOpen = false;
-      },
-    },
+    theme: {},
   },
   libraries: {
     html2react: {
@@ -54,4 +47,4 @@ const marsTheme = {
   },
 };
 
-export default marsTheme;
+export default droneTheme;
