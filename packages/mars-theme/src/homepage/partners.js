@@ -10,6 +10,7 @@ import {
 import { Primarybtn } from "./components/buttons";
 import business_chat from "../../assets/undraw_business_chat.svg";
 import business_2 from "../../assets/undraw_solution_mindse.svg";
+import { CenterColFlexCss } from "./flex-utils";
 // import mountain from "../../assets/falling-pink-sakura.jpg";
 
 const b = css`
@@ -326,10 +327,11 @@ function Cfa_cmt({ children, style }) {
       style={{
         border: "1px solid black",
         padding: "1.5rem",
-        height: "max(200px, 320px)",
+        maxHeight: "320px",
         borderRadius: "1rem",
         ...style,
       }}
+      css={CenterColFlexCss}
     >
       {children}
     </div>
@@ -364,7 +366,15 @@ function Cfa(state) {
             Amet reprehenderit tempora provident tempora quod Voluptatibus quia
             aut vero porro eligendi ullam. Quo esse alias eum qui qui! Sequi
           </p>
-          <Primarybtn>Sign up</Primarybtn>
+          <Primarybtn
+            style={{
+              marginTop: "1rem",
+              padding: "1rem 5rem",
+              alignSelf: "center",
+            }}
+          >
+            Sign up
+          </Primarybtn>
         </Cfa_cmt>
       </SplitGridComp>
     </Center>
